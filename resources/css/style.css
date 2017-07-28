@@ -45,6 +45,10 @@ body {
   margin-right: 2rem;
 }
 
+.header .nav nav #menu {
+  display: none;
+}
+
 .header .nav nav span a {
   color: #FFFFFF;
   text-decoration: none;
@@ -69,7 +73,6 @@ body {
 }
 
 .banner .title span {
-  margin-left: 2rem;
   padding: 1.5rem 5rem 1.5rem 5rem;
   background-color: #FFFFFF;
   font-weight: bold;
@@ -170,12 +173,101 @@ footer img {
 
   /*Banner title gets smaller and moves up and in*/
   .banner .title {
-    margin-top: 5.75rem;
+    margin-top: 6.25rem;
   }
 
   .banner .title span {
-    padding: 0.75rem 4rem 0.75rem 4rem;
+    padding: 1.25rem 4rem 1.25rem 4rem;
     font-size: 1.33rem;
     right: 2rem;
   }
+}
+
+@media only screen and (max-width: 720px) {
+  /*Hide logo text*/
+  .header .logo span {
+    display: none;
+  }
+
+  /*Hide menu items*/
+  .header .nav nav span {
+    display: none;
+  }
+
+  /*Show hidden menu button*/
+  .header .nav nav #menu {
+    display: inline;
+  }
+
+  /*Banner gets shorter again and background moves across 20%*/
+  .banner {
+    height: 18rem;
+    background-position: 20%;
+    margin-bottom: 3.77rem;
+  }
+
+  /*Banner title spans full width of page and moves down*/
+  .banner .title {
+    width: 100%;
+    margin-top: 10rem;
+    position: static;
+  }
+
+  .banner .title span {
+    text-align: center;
+    position: static;
+    padding: 1rem 0rem 1rem 0rem;
+    font-size: 1rem;
+    right: 0;
+    width: 100%;
+  }
+
+  /*Services organised in a column*/
+  .services {
+    flex-direction: column;
+    margin-bottom: 2.23rem;
+  }
+
+  /*Make font smaller and make service item more compact*/
+  .services .service {
+    margin: 0 3rem 1.54rem 3rem;
+    height: auto;
+    position: static;
+  }
+
+  .services .service img {
+    display: block;
+  }
+
+  .services .service span {
+    position: static;
+    font-size: 0.77rem;
+    padding-top: 1.0rem;
+  }
+
+  /*Organise info sections into columns*/
+  .about {
+    flex-direction: column;
+  }
+
+  /*Make info block content span full width*/
+  .about .info-block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about .info-block .head {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .about .info-block p {
+    font-size: 0.77rem;
+    margin-bottom: 4rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
 }
